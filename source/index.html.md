@@ -49,23 +49,23 @@ curl --request POST --url "https://api.satellogic.com/oauth/token" \
 > The tokens are samples. The URLs could be different depending on your location and contract.
 
 
-Authentication happens through OAuth protocol. As part of your contract and in order to integrate "machine to machine" you'll receive 3 set of credentials. 
-Each credential is form by a pair ot Key and Secret that can be uses in the Authentication process. 
+Authentication happens through OAuth V2 protocol. As part of your contract and in order to integrate "machine to machine" you'll receive 3 set of credentials. 
+Each credential is form by a pair of Key and Secret that are expected during the Authentication process. 
 
-These credentials are knows as "Root scopes" and they are ultimately defined by the SLA or agreement applying to you as a client of Satellogic. 
-You'll receive 3 of them and in general they can be described as this: 
+These credentials represent different "Root scopes", they are ultimately defined by the SLA or agreement applying to you as a client of Satellogic. 
+You'll receive three Root Scope that in general can be described as follows: 
 
-* Admin access Root scope: allows administration of the interactions with your API from the rest of the scopes like permissions
+* Admin scope: allows administration of the interactions with your API from the rest of the provided scopes like permissions
 
-* Tasking Root scope: allows interacting with the satellite planning and tasking API and image and data serving API
+* Tasking scope: allows interacting with the satellite planning and tasking API and image and data serving API
  
-* Read only Root scope: allows only for read-only operations like listing opportunities, tasks, its progress and status and obtaining the tasking resulting images.
+* Read-only scope: allows only for read-only operations like listing opportunities, tasks, its progress and status and obtaining the tasking resulting images.
 
-In your system integrating with Satellogic's API you can use any of them according to your needs, the idea is provide you with additional security measures so in case of 
-any security breach you know that our systems will impose these additional contention restrictions. 
+Using the Root Scopes, in your system you can create users and assign roles and permissions that ultimately will hit Satellogic's API using one of these scopes. So you can 
+further segment and limit access to the API but never go beyond the scope under which the request happens. 
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+Scopes provide an additional contention for your integration.
 </aside>
 
 # Kittens
