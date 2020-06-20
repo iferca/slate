@@ -1,6 +1,6 @@
-## Tasking
+# Tasking API
 
-### Get All Kittens
+## Get All Kittens
 
 ```shell
 curl "http://example.com/api/kittens"
@@ -31,11 +31,11 @@ curl "http://example.com/api/kittens"
 
 This endpoint retrieves all kittens.
 
-#### HTTP Request
+### HTTP Request
 
 `GET http://example.com/api/kittens`
 
-#### Query Parameters
+### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
@@ -46,7 +46,7 @@ available | true | If set to false, the result will include kittens that have al
 Remember — a happy kitten is an authenticated kitten!
 </aside>
 
-### Get a Specific Kitten
+## Get a Specific Kitten
 
 ```shell
 curl "http://example.com/api/kittens/2"
@@ -69,17 +69,17 @@ This endpoint retrieves a specific kitten.
 
 <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
-#### HTTP Request
+### HTTP Request
 
 `GET http://example.com/kittens/<ID>`
 
-#### URL Parameters
+### URL Parameters
 
 Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to retrieve
 
-#### Delete a Specific Kitten
+### Delete a Specific Kitten
 
 ```shell
 curl "http://example.com/api/kittens/2"
@@ -98,11 +98,11 @@ curl "http://example.com/api/kittens/2"
 
 This endpoint deletes a specific kitten.
 
-#### HTTP Request
+### HTTP Request
 
 `DELETE http://example.com/kittens/<ID>`
 
-#### URL Parameters
+### URL Parameters
 
 Parameter | Description
 --------- | -----------
